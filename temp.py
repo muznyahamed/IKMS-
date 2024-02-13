@@ -6,7 +6,7 @@ from langchain.llms import OpenAI
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationChain
 from langchain.memory import ConversationSummaryBufferMemory
-llm = OpenAI()
+llm = OpenAI(model="gpt-3.5-turbo")
 memory = ConversationSummaryBufferMemory(llm=llm, max_token_limit=100)
 app = Flask(__name__)
 CORS(app)
